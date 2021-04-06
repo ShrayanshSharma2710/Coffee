@@ -214,31 +214,41 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                        InlineKeyboardButton(
-                            text=" 👑 Summon Me ",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username)),
-                         InlineKeyboardButton(
-                             text=" 🔔 Updates ",
-                             url="https://t.me/SenkuUpdates")
-                     ],
-                     [
-                        InlineKeyboardButton(
-                            text=" ✨ Help ",
-                            url="https://t.me/SenkuRobot?start=help"),
-                         InlineKeyboardButton(
-                            text=" ⚡️ Get Started ",
-                             url="https://t.me/SenkuUpdates/4")        
-                       
-                     ],
-                     [
-                        InlineKeyboardButton(
-                             text=" ❤️ Source Code ",
-                             url="https://github.com/FtSasaki/SenkuRobot")
-                    
+                            InlineKeyboardButton(
+                                text="👑 Add Winnie to your group",
+                                url="t.me/{}?startgroup=true".format(
+                                    context.bot.username
+                                ),
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="💁 Support Group",
+                                url=f"https://t.me/{SUPPORT_CHAT}",
+                            ),
+                            InlineKeyboardButton(
+                                text="🔔 Updates Channel",
+                                url="https://t.me/Coffee_Updates",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text=" ✨ Help ",
+                                url="https://t.me/MissCoffeeBot?start=help",
+                            ),
+                            InlineKeyboardButton(
+                                text=" ⚡️ Get Started ",
+                                url="https://t.me/Coffee_Updates/3",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text=" ✍️ Mai Repo ✍️ ",
+                                url="https://t.me/Coffee_Updates/4",
+                            )
+                        ],
                     ]
-                   ]
-                )
+                ),
             )
     else:
         update.effective_message.reply_text(
